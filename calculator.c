@@ -9,6 +9,35 @@ void calcAddition() {
     int result = a + b;
     printf("The sum is %d\n", result);
 }
+void calcSubtraction(){
+    printf("Enter two numbers:");
+    int a,b;
+    scanf("%d%d", &a, &b);
+    int result=a-b;
+    printf("The difference is %d\n",result);
+}
+void calcMultiplication(){
+    printf("Enter two number:");
+    int a,b;
+    scanf("%d%d", &a, &b);
+    int result=a*b;
+    printf("The result is %d\n", result);
+}
+void calcDivison(){
+    printf("Enter two number:");
+    int a,b;
+    scanf("%d%d", &a, &b);
+    int result=a/b;
+    printf("The result is %d\n", result);
+}
+void calcExponentation(){
+    printf("Enter a number:");
+    int a;
+    scanf("%d", &a);
+    int result=a*b;
+    double result = exp(x);
+    printf("The exponential is%.2lf",result);
+}
 
 // Fill the rest of the functionality here!
 // 2. Subtraction
@@ -21,12 +50,57 @@ void calcSine() {
     printf("\nEnter the angle in degrees: ");
     int angle;
     scanf("%d", &angle);
-
-    // Convert degrees to radians
     double radians = angle / 180.0 * 3.14;
     double answer = sin(radians);
-
-    printf("The sine value is %f", answer);
+    printf("The sine value is %lf", answer);
+    
+}
+void calcCosine() {
+    printf("Enter the numer:");
+    int numer;
+    scanf("%d", numer);
+    double result=acos(number);
+    printf("The cosine in radians is %lf",result);
+    
+    
+}
+void calcTangent()
+{
+    printf("Enter the number:");
+    int number;
+    scanf("%d",number);
+    double result=atan(number);
+    printf("The tangent is %lf",result);
+}
+void calcFloor(){
+    double number;
+    printf("Enter the number:");
+    scanf("%lf", &number);
+    int result=floor(number);
+    printf("The floor is %d",result);
+}
+void calcCeil{
+    double number;
+    printf("Enter the number");
+    scanf("%lf", &number);
+    int result=ceil(number);
+    printf("The ceil is %d",result);
+}
+void calcRound()
+{
+    double number;
+    printf("Enter the number:");
+    scanf("%lf", &number);
+    int result=round(number);
+    printf("The result is %d", number);
+}
+void calcAbs()
+{
+    double number;
+    printf("Enter the number:");
+    scanf("%lf", &number);
+    double result=fabs(number);
+    printf("The result is %lf",result);
 }
 
 // Fill the rest of the functionality here!
@@ -64,9 +138,17 @@ int main() {
             break;
 
         case 2:
+            calcSubtraction();
+            break;
         case 3:
+            calcMultiplication();
+            break;
         case 4:
+            calcDivision();
+            break;
         case 5:
+            calcExponentation();
+            break;
 
         // 6. Sine
         case 6:
@@ -74,11 +156,23 @@ int main() {
             break;
 
         case 7:
+            calcCosine();
+            break;
         case 8:
+            calcTangent();
+            break;
         case 9:
+            calcFloor();
+            break;
         case 10:
+            calcCeiling();
+            break;
         case 11:
+            calcRound();
+            break;
         case 12:
+            calcAbs();
+            break;
         default:
             printf("Invalid choice!");
     }
