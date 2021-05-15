@@ -23,7 +23,7 @@ void calcMultiplication(){
     int result=a*b;
     printf("The result is %d\n", result);
 }
-void calcDivison(){
+void calcDivision(){
     printf("Enter two number:");
     int a,b;
     scanf("%d%d", &a, &b);
@@ -34,8 +34,7 @@ void calcExponentation(){
     printf("Enter a number:");
     int a;
     scanf("%d", &a);
-    int result=a*b;
-    double result = exp(x);
+    double result = exp(a);
     printf("The exponential is%.2lf",result);
 }
 
@@ -57,8 +56,8 @@ void calcSine() {
 }
 void calcCosine() {
     printf("Enter the numer:");
-    int numer;
-    scanf("%d", numer);
+    double number;
+    scanf("%lf", &number);
     double result=acos(number);
     printf("The cosine in radians is %lf",result);
     
@@ -67,8 +66,8 @@ void calcCosine() {
 void calcTangent()
 {
     printf("Enter the number:");
-    int number;
-    scanf("%d",number);
+    double number;
+    scanf("%lf", &number);
     double result=atan(number);
     printf("The tangent is %lf",result);
 }
@@ -79,7 +78,7 @@ void calcFloor(){
     int result=floor(number);
     printf("The floor is %d",result);
 }
-void calcCeil{
+void calcCeil(){
     double number;
     printf("Enter the number");
     scanf("%lf", &number);
@@ -88,9 +87,9 @@ void calcCeil{
 }
 void calcRound()
 {
-    double number;
+    int  number;
     printf("Enter the number:");
-    scanf("%lf", &number);
+    scanf("%d", &number);
     int result=round(number);
     printf("The result is %d", number);
 }
@@ -165,7 +164,7 @@ int main() {
             calcFloor();
             break;
         case 10:
-            calcCeiling();
+            calcCeil();
             break;
         case 11:
             calcRound();
